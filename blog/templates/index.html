@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for post in posts %}
+    <div class="row justify-content-md-center">
+        <div class="post">
+          <div class="card">
+            <div class="card-header">
+              {{ post.author }}
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"> {{ post.title }} </h5>
+              <p class="card-text"> {{ post.content }} </p>
+              <hr>
+              <div class="post-info">
+                <span class="post-date"> {{ post.date_posted }} </span>
+                <div class="post-read">
+                  <a href="#" class="btn btn-sm btn-dark">Reed more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+{% endfor %}
+{% endblock  %}
